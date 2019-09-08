@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { View, Text, StyleSheet, Button, Image } from 'react-native';
 
 import BodyText from '../components/BodyText';
@@ -69,3 +70,28 @@ const styles = StyleSheet.create({
 });
 
 export default GameOverScreen;
+=======
+import { View,Button, Text, StyleSheet} from 'react-native';
+
+const GameOverScreen = props => {
+    console.log('Gameover');
+    return( 
+    <View style = {styles.screen}>
+        <Text>The Game is Over!</Text>
+        <Text>Number of rounds: {props.roundsNumber}</Text>
+        <Text>Number was: {props.userNumber}</Text>
+        <Button title="New Game" onPress={props.onRestart}></Button>
+    </View>
+);
+};
+
+const styles = StyleSheet.create({
+    screen: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center"
+    }
+});
+
+export default GameOverScreen;
+>>>>>>> 92d87454bdcfd92a403f3124fdf54214e68c7cd3
